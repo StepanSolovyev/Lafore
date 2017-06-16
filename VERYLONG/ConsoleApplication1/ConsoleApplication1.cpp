@@ -1,0 +1,25 @@
+// ConsoleApplication1.cpp: определ€ет точку входа дл€ консольного приложени€.
+// вычисл€ет факториалы больших чисел
+#include "verylong.h"      // заголовочный файл verylong
+#include "stdafx.h"
+
+
+int main()
+{  SetConsoleCP(1251);
+   SetConsoleOutputCP(1251);
+
+	unsigned long numb, j;
+	verylong fact = 1;       // инициализировать verylong
+
+	cout << "\n\n¬ведите число: ";
+	cin >> numb;             // ввод числа типа long int
+
+	for (j = numb; j > 0; j--)// факториал Ч это numb *
+		fact = fact * j;       // numb-1 * numb-2 *
+	cout << "‘акториал = ";  // numb-3 и т. д.
+	fact.putvl();            // вывести значение факториала
+	cout << endl;
+	system("pause");
+    return 0;
+}
+
