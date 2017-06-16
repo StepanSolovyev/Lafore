@@ -1,9 +1,6 @@
 // ConsoleApplication1.cpp: определяет точку входа для консольного приложения.
 // вычисляет факториалы больших чисел
-#include "verylong.h"      // заголовочный файл verylong
 #include "stdafx.h"
-
-
 int main()
 {  SetConsoleCP(1251);
    SetConsoleOutputCP(1251);

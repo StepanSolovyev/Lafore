@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{D654F658-CFD8-459C-9889-23FF5D30975B}</ProjectGuid>
+    <RootNamespace>Tinc</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\openssl\include\openssl;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\openssl\include\openssl;</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\avl_tree.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\conf.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\connection.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\dropin.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\dummy_device.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\edge.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\event.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\fake-getaddrinfo.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\fake-getnameinfo.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\getopt.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\getopt1.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\graph.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\list.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\logger.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\meta.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\multicast_device.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\net.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\netutl.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\net_packet.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\net_setup.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\net_socket.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\node.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\pidfile.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\process.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\protocol.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\protocol_auth.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\protocol_edge.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\protocol_key.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\protocol_misc.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\protocol_subnet.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\proxy.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\raw_socket_device.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\route.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\subnet.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\tincd.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\uml_device.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\utils.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\vde_device.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\xmalloc.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\avl_tree.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\conf.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\connection.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\device.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\dropin.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\edge.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\ethernet.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\event.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\fake-gai-errnos.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\fake-getaddrinfo.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\fake-getnameinfo.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\getopt.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\graph.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\have.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\ipv4.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\ipv6.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\list.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\logger.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\meta.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\net.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\netutl.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\node.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\pidfile.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\process.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\protocol.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\proxy.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\route.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\subnet.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\system.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\utils.h" />
+    <ClInclude Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\xalloc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\..\Program Files\Git\tinc\src\Makefile.am" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

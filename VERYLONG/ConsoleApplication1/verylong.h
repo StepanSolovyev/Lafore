@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string.h>            // для strlen()и т. п.
 #include <stdlib.h>            // для ltoa()
-using namespace std;
+//using namespace std;
 
 const int SZ = 1000;           // максимальное число разрядов
 

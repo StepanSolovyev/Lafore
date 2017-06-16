@@ -2,16 +2,14 @@
 // или включаемых файлов дл€ конкретного проекта, которые часто используютс€, но
 // не часто измен€ютс€
 //
-using namespace std;
+
 #pragma once
-#define _CRT_SECURE_NO_WARNINGS
 
 #include "targetver.h"
 
 #include <stdio.h>
 #include <tchar.h>
-#include <Windows.h>
-#include "verylong.h"      // заголовочный файл verylong
+
 
 
 // TODO: ”становите здесь ссылки на дополнительные заголовки, требующиес€ дл€ программы

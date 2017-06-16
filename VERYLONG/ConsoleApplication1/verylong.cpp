@@ -3,11 +3,12 @@
 #include "verylong.h" // заголовочный файл для verylong
 #include "stdafx.h"
 //---------------------------------------------------------
+
 void verylong::putvl() const // вывод на экран verylong
 {
 	char temp[SZ];
 	strcpy(temp, vlstr);       // создать копию
-	cout << strrev(temp);      // перевернуть копию
+	cout << _strrev(temp);      // перевернуть копию
 }                            // и вывести ее
 							 //---------------------------------------------------------
 void verylong::getvl()       // получить сверхбольшое число от
@@ -15,7 +16,7 @@ void verylong::getvl()       // получить сверхбольшое число от
 {
 	cin >> vlstr;              // получить строку от пользователя
 	vlen = strlen(vlstr);      // найти ее длину
-	strrev(vlstr);             // перевернуть ее
+	_strrev(vlstr);             // перевернуть ее
 }
 
 
