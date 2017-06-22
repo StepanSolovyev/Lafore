@@ -54,8 +54,8 @@ void linklist<TYPE>::display()     // вывод всех ссылок
 
 int main()
 {
-	//SetConsoleCP(1251);
-	//SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	linklist<double> ld;    // ld - объект linklist<double>
 
 	ld.additem(151.5);      // добавить три числа double  в список ld
@@ -65,9 +65,9 @@ int main()
 
 	linklist<char> lch;     // lch - объект linklist<char>
 
-	lch.additem('a');       // три символа (char) - в список lch
-	lch.additem('b');
-	lch.additem('c');
+	lch.additem('и');       // три символа (char) - в список lch
+	lch.additem('р');
+	lch.additem('а');
 	lch.display();          // вывести весь список lch
 	cout << endl;
 	system("pause");
