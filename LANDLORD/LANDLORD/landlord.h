@@ -2,7 +2,7 @@
 // заголовочный файл landlord.cpp - содержит объявления
 // классов и т.п.
 //#pragma warning (disable:4786) // для множеств (только
-#pragma warning( disable : 4244 ) // warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+//#pragma warning( disable : 4244 ) // warning C4244: 'return': conversion from 'uint64_t' to 'double', possible loss of data
 // компиляторы microsoft)"
 
 // для accumulate()
@@ -16,14 +16,14 @@ class tenant
 {
 private:
 	string name;       // имя жильца
-	int aptNumber;     // номер комнаты жильца
+	uint64_t aptNumber;     // номер комнаты жильца
 					   // здесь может быть прочая информация о жильце 
 					   // (телефон и т.п.)
 
 public:
-	tenant(string n, int aNo);
+	tenant(string n, uint64_t aNo);
 	~tenant();
-	int getAptNumber();
+	uint64_t getAptNumber();
 	// нужно для использования во множестве
 	friend bool operator<(const tenant&, const tenant&);
 	friend bool operator==(const tenant&, const tenant&);
@@ -51,7 +51,7 @@ public:
 	~tenantList();                // деструктор 
 								  // (удаление жильцов)
 	void insertTenant(tenant*);   // внесение жильца в список
-	int getAptNo(string);         // возвращает номер комнаты
+	uint64_t getAptNo(string);         // возвращает номер комнаты
 	void display();               // вывод списка жильцов
 };
 // конец объявления класса tenantList
@@ -62,7 +62,7 @@ class tenantInputScreen
 private:
 	tenantList* ptrTenantList;
 	string tName;
-	int aptNo;
+	uint64_t aptNo;
 
 public:
 	tenantInputScreen(tenantList* ptrTL) : ptrTenantList(ptrTL)
@@ -76,14 +76,14 @@ public:
 class rentRow
 {
 private:
-	int aptNo;
-	float rent[12];
+	uint64_t aptNo;
+	double rent[12];
 
 public:
-	rentRow(int);                 // конструктор с одним
+	rentRow(uint64_t);                 // конструктор с одним
 								  // параметром
-	void setRent(int, float);     // запись платы за месяц
-	float getSumOfRow();          // сумма платежей 
+	void setRent(uint64_t, double);     // запись платы за месяц
+	double getSumOfRow();          // сумма платежей 
 								  // из одной строки
 								  // нужно для сохранения во множестве
 	friend bool operator<(const rentRow&, const rentRow&);
@@ -109,9 +109,9 @@ private:
 	set<rentRow*, compareRows>::iterator iter;
 public:
 	~rentRecord();
-	void insertRent(int, int, float);
+	void insertRent(uint64_t, uint64_t, double);
 	void display();
-	float getSumOfRents();        // сумма всех платежей
+	double getSumOfRents();        // сумма всех платежей
 };  // конец класса rentRecord
 
 	////////////////////класс rentInputScreen//////////////////
@@ -121,9 +121,9 @@ private:
 	tenantList* ptrTenantList;
 	rentRecord* ptrRentRecord;
 	string renterName;
-	float rentPaid;
-	int month;
-	int aptNo;
+	double rentPaid;
+	uint64_t month;
+	uint64_t aptNo;
 
 public:
 	rentInputScreen(tenantList* ptrTL, rentRecord* ptrRR) :
@@ -138,13 +138,13 @@ public:
 class expense
 {
 public:
-	int month, day;
+	uint64_t month, day;
 	string category, payee;
-	float amount;
+	double amount;
 	expense()
 	{  }
 
-		expense(int m, int d, string c, string p, float a) :
+		expense(uint64_t m, uint64_t d, string c, string p, double a) :
 		month(m), day(d), category(c), payee(p), amount(a)
 	{ /* тут пусто! */
 	}
@@ -178,7 +178,7 @@ public:
 	~expenseRecord();
 	void insertExp(expense*);
 	void display();
-	float displaySummary();       // нужно для годового отчета 
+	double displaySummary();       // нужно для годового отчета 
 };  // конец класса expenseRecord
 
 	////////////////класс expenseInputScreen///////////////////
@@ -197,14 +197,14 @@ class annualReport
 private:
 	rentRecord* ptrRR;
 	expenseRecord* ptrER;
-	float expenses, rents;
+	double expenses, rents;
 
 public:
 	annualReport(rentRecord*, expenseRecord*);
 	void display();
 };  // конец класса annualReport
 
-	//////////////////конец userInterface//////////////////////
+	//////////////////конец useruint64_terface//////////////////////
 class userInterface
 {
 private:
@@ -221,5 +221,5 @@ public:
 	userInterface();
 	~userInterface();
 	void interact();
-};  // конец класса userInterfac
+};  // конец класса useruint64_terfac
 	//////////////////конец файла landlord.h///////////////////

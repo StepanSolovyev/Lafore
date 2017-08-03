@@ -8,7 +8,7 @@
 
 using namespace std;
 #pragma once
-#define _CRT_SECURE_NO_WARNINGS
+
 
 
 #include <stdio.h>
@@ -21,6 +21,7 @@ using namespace std;
 #include <string>
 #include <algorithm>           // для sort()
 #include <numeric> 
+#include <stdint.h>
 
 
 

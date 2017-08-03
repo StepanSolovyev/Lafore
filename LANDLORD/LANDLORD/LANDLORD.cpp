@@ -1,5 +1,7 @@
-﻿// LANDLORD.cpp : Defines the entry point for the console application.
+﻿// LANDLORD.cpp : Defines the entry pouint64_t for the console application.
 //
+
+#define _CRT_SECURE_NO_WARNINGS
 
 #include "stdafx.h"
 #include "landlord.h"
@@ -21,7 +23,7 @@ char getaChar()                 // получение символа
 }
 //---------------------------------------------------------
 ////////////////методы класса tenant///////////////////////
-tenant::tenant(string n, int aNo) : name(n), aptNumber(aNo)
+tenant::tenant(string n, uint64_t aNo) : name(n), aptNumber(aNo)
 { /* тут пусто */
 }
 //---------------------------------------------------------
@@ -29,7 +31,7 @@ tenant::~tenant()
 { /* тут тоже пусто */
 }
 //---------------------------------------------------------
-int tenant::getAptNumber()
+uint64_t tenant::getAptNumber()
 {
 	return aptNumber;
 }
@@ -86,10 +88,10 @@ void tenantList::insertTenant(tenant* ptrT)
 	setPtrsTens.insert(ptrT);     // вставка
 }
 //---------------------------------------------------------
-int tenantList::getAptNo(string tName) // имя присутствует
+uint64_t tenantList::getAptNo(string tName) // имя присутствует
 									   // в списке?
 {
-	int aptNo;
+	uint64_t aptNo;
 	tenant dummy(tName, 0);
 	iter = setPtrsTens.begin();
 	while (iter != setPtrsTens.end())
@@ -115,18 +117,18 @@ void tenantList::display()            // вывод списка жильцов
 }  // end display()
    //---------------------------------------------------------
    /////////////////методы класса rentRow/////////////////////
-rentRow::rentRow(int an) : aptNo(an)   // 1-арг. конструктор
+rentRow::rentRow(uint64_t an) : aptNo(an)   // 1-арг. конструктор
 {
 	fill(&rent[0], &rent[12], 0);
 }
 
 //---------------------------------------------------------
-void rentRow::setRent(int m, float am)
+void rentRow::setRent(uint64_t m, double am)
 {
 	rent[m] = am;
 }
 //---------------------------------------------------------      
-float rentRow::getSumOfRow()    // сумма арендных платежей 
+double rentRow::getSumOfRow()    // сумма арендных платежей 
 								// в строке
 {
 	return accumulate(&rent[0], &rent[12], 0);
@@ -145,7 +147,7 @@ bool operator==(const rentRow& t1, const rentRow& t2)
 ostream& operator<<(ostream& s, const rentRow& an)
 {
 	s << an.aptNo << '\t';        // вывести номер комнаты
-	for (int j = 0; j < 12; j++)   // вывести 12 арендных
+	for (uint64_t j = 0; j < 12; j++)   // вывести 12 арендных
 								   // платежей
 	{
 		if (an.rent[j] == 0)
@@ -175,7 +177,7 @@ rentRecord::~rentRecord()      // деструктор
 	}
 }
 //---------------------------------------------------------
-void rentRecord::insertRent(int aptNo, int month, float amount)
+void rentRecord::insertRent(uint64_t aptNo, uint64_t month, double amount)
 {
 	rentRow searchRow(aptNo);     // временная строка
 								  // с тем же aptNo
@@ -214,9 +216,9 @@ void rentRecord::display()
 	}
 }
 //---------------------------------------------------------
-float rentRecord::getSumOfRents()   // сумма всех платежей
+double rentRecord::getSumOfRents()   // сумма всех платежей
 {
-	float sumRents = 0.0;
+	double sumRents = 0.0;
 	iter = setPtrsRR.begin();
 	while (iter != setPtrsRR.end())
 	{
@@ -318,11 +320,11 @@ void expenseRecord::display()
 		}
 }
 //---------------------------------------------------------
-float expenseRecord::displaySummary() // используется при
+double expenseRecord::displaySummary() // используется при
 									  // составлении 
 									  // годового отчета
 {
-	float totalExpenses = 0;            // сумма, все 
+	double totalExpenses = 0;            // сумма, все 
 										// категории
 
 	if (vectPtrsExpenses.size() == 0)
@@ -338,7 +340,7 @@ float expenseRecord::displaySummary() // используется при
 
 	iter = vectPtrsExpenses.begin();
 	string tempCat = (*iter)->category;
-	float sumCat = 0.0;
+	double sumCat = 0.0;
 	while (iter != vectPtrsExpenses.end())
 	{
 		if (tempCat == (*iter)->category)
@@ -369,9 +371,9 @@ expenseInputScreen::expenseInputScreen(expenseRecord* per) : ptrExpenseRecord(pe
 //------------------------------------------------------
 void expenseInputScreen::getExpense()
 {
-	int month, day;
+	uint64_t month, day;
 	string category, payee;
-	float amount;
+	double amount;
 
 	cout << "Введите месяц (1-12): ";
 	cin >> month;
@@ -411,7 +413,7 @@ void annualReport::display()
 	cout << "\nБаланс\t\t\t" << rents - expenses << endl;
 }
 //---------------------------------------------------------
-////////////////методы класса userInterface//////////////
+////////////////методы класса useruint64_terface//////////////
 userInterface::userInterface()
 {
 	// это жизненно важно для программы
@@ -495,7 +497,7 @@ void userInterface::interact()
 		else
 			cout << "Неизвестная функция. Нажимайте только 'i', 'd' или 'q'\n";
 	}                          // конец while
-}                            // конец interact()
+}                            // конец uint64_teract()
 							 //////////////////конец файла landlord.cpp//////////////////
 
 
