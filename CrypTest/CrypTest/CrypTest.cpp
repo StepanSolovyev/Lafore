@@ -41,7 +41,7 @@ public:
 
 			// Encrypt the data using DataProtectionScope.CurrentUser. The result can be decrypted
 			//  only by the same current user.
-			return ProtectedData::Protect(data, s_aditionalEntropy, DataProtectionScope::CurrentUser);
+			return System::Security::Cryptography::ProtectedData::Protect(data, s_aditionalEntropy, DataProtectionScope::CurrentUser);
 		}
 		catch (CryptographicException^ e)
 		{
@@ -83,5 +83,5 @@ public:
 int main()
 {
 	DataProtectionSample::Main();
-	
+	return 0;
 }
