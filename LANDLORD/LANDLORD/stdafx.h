@@ -10,11 +10,18 @@ using namespace std;
 #pragma once
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "targetver.h"
+
 #include <stdio.h>
 #include <tchar.h>
 #include <Windows.h>
-#include "landlord.h" // заголовочный файл landlord.h
+
+#include <iostream>
+#include <vector>
+#include <set>
+#include <string>
+#include <algorithm>           // для sort()
+#include <numeric> 
+
 
 
 

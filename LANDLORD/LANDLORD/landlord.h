@@ -1,15 +1,10 @@
 ﻿// landlord.h
 // заголовочный файл landlord.cpp - содержит объявления
 // классов и т.п.
-#pragma warning (disable:4786) // для множеств (только
-// компиляторы microsoft)
-#include "stdafx.h"
-#include <iostream>
-#include <vector>
-#include <set>
-#include <string>
-#include <algorithm>           // для sort()
-#include <numeric> 
+//#pragma warning (disable:4786) // для множеств (только
+#pragma warning( disable : 4244 ) // warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+// компиляторы microsoft)"
+
 // для accumulate()
 //using namespace std;
 ////////////////////глобальные методы//////////////////////

@@ -1,6 +1,7 @@
 ﻿// LANDLORD.cpp : Defines the entry point for the console application.
 //
 
+#include "stdafx.h"
 #include "landlord.h"
 // для объявлений класса, и т.д.
 //////////////////////global functions////////////////////
