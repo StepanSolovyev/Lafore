@@ -5,8 +5,8 @@
 
 int main()
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251); 
+	SetConsoleOutputCP(1251); //тест
 
 	userInterface theUserInterface;
 
