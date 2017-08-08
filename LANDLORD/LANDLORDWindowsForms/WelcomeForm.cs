@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace LANDLORDWindowsForms
 {
-    public partial class Form1 : Form
+    public partial class WelcomeForm : Form
     {
-        public Form1()
+        public WelcomeForm()
         {
             InitializeComponent();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
