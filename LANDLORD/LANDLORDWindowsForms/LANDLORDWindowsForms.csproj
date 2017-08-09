@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SubForm2Bt1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm2Bt1.Designer.cs">
+      <DependentUpon>SubForm2Bt1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormBt1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormBt1.Designer.cs">
+      <DependentUpon>SubFormBt1.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +65,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="SubForm2Bt1.resx">
+      <DependentUpon>SubForm2Bt1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormBt1.resx">
+      <DependentUpon>SubFormBt1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>

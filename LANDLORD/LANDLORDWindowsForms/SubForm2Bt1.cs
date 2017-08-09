@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace LANDLORDWindowsForms
 {
-    public partial class WelcomeForm : Form
+    public partial class SubForm2Bt1 : Form
     {
-        public WelcomeForm()
+        public SubForm2Bt1()
         {
             InitializeComponent();
-            Form2 = new SubFormBt1();
-        }
-        SubFormBt1 Form2;
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Form2.Show();
+            
         }
     }
 }
