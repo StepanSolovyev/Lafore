@@ -96,5 +96,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LANDLORD\LANDLORD.vcxproj">
+      <Project>{42468d81-b272-4b2f-bea2-67065eede091}</Project>
+      <Name>LANDLORD</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

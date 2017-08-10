@@ -27,6 +27,9 @@
     <ClInclude Include="landlord.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -35,7 +38,7 @@
     <ClCompile Include="LANDLORD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lordApp.cpp">
+    <ClCompile Include="Export.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,7 +1,7 @@
 ﻿// LANDLORD.cpp : Defines the entry pouint64_t for the console application.
 //
 
-#define _CRT_SECURE_NO_WARNINGS
+
 
 #include "stdafx.h"
 #include "landlord.h"
