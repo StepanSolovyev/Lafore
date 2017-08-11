@@ -17,7 +17,8 @@ namespace LANDLORDWindowsForms
             InitializeComponent();
         }
         public string FIO;
-        public int Numb; //must be uint64_t
+        public string N;
+        int RN;  //must be uint64_t
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
                               
@@ -27,7 +28,8 @@ namespace LANDLORDWindowsForms
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            Numb = textBox2.Text;
+            N = textBox2.Text;
+            RN = N.Trim; //?
         }
     }
 }
