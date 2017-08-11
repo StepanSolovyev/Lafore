@@ -16,10 +16,18 @@ namespace LANDLORDWindowsForms
         {
             InitializeComponent();
         }
-
+        public string FIO;
+        public int Numb; //must be uint64_t
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+                              
+            FIO = textBox1.Text;
+            getTenant();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            Numb = textBox2.Text;
         }
     }
 }

@@ -9,6 +9,22 @@ using namespace std;
 
 namespace LandLord
 {
+	void tenantInputScreen::getTenant()   // получение данных о
+	{	// жильцах
+		
+		getaLine(tName);
+		
+		cin >> aptNo;
+		cin.ignore(80, '\n');               // создать жильца
+		tenant* ptrTenant = new tenant(tName, aptNo);
+		ptrTenantList->insertTenant(ptrTenant); // занести в
+												// список жильцов
+		
+	
+
+												
+												
+	////////////////////////////
 	 double  MyMathFuncs::Add(double a, double b)
 	{
 		return a + b;
